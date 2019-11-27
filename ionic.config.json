@@ -1,5 +1,13 @@
 {
   "name": "Contactos",
-  "integrations": {},
-  "type": "ionic-angular"
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular",
+  "proxies": [
+    {
+      "path": "/Contactos",
+      "proxyUrl": "http://127.0.0.1:5000"
+    }
+  ]
 }

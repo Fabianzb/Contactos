@@ -1,14 +1,49 @@
-<ion-header>
+<ion-header > 
   <ion-navbar>
-    <ion-title>
-      Ionic Blank
+    <ion-title >
+      Contactos
     </ion-title>
+    <ion-buttons end>
+      <button style="font-size: 30px;" ion-button icon only (click)="clickAdd()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content >
+  <ion-searchbar animated></ion-searchbar>
+    <ion-item-group>
+      <ion-list *ngFor="let contacto of contacts">
+        <ion-item >
+          <ion-avatar item-start>
+            <img src={{contacto.avatar}}>
+          </ion-avatar>
+          <h2 (click)="clickContacto(contacto.avatar,contacto.nombre,contacto.correo,contacto.telefono,contacto.facebook,contacto.instagram,contacto.twitter)">{{contacto.nombre}}</h2>
+          <h3>{{contacto.telefono}}</h3>
+        </ion-item>
+      </ion-list>
+    </ion-item-group>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar text-center="">
+    <ion-buttons >
+      <button ion-button style="font-size: 27px;">
+        <ion-icon name="ios-star-outline"></ion-icon>
+      </button>
+      <button ion-button style="font-size: 27px;">
+        <ion-icon name="ios-time-outline"></ion-icon>
+      </button>
+      <button ion-button style="font-size: 27px;">
+        <ion-icon name="ios-contact-outline"></ion-icon>
+      </button>
+      <button  ion-button style="font-size: 27px;">
+        <ion-icon  name="ios-keypad-outline"></ion-icon>
+      </button>
+      <button ion-button style="font-size: 27px;">
+        <ion-icon name="ios-recording-outline"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
