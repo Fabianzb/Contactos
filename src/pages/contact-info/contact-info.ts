@@ -16,20 +16,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class ContactInfoPage {
   avatar = '';
   nombre = '';
-  correo = '';
-  telefono = '';
-  facebook = '';
-  instagram = '';
-  twitter = '';
+  marca = '';
+  serie = '';
+  precio = '';
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.avatar = navParams.get('avatar');
     this.nombre = navParams.get('nombre');
-    this.correo = navParams.get('correo');
-    this.telefono = navParams.get('telefono');
-    this.facebook = navParams.get('facebook');
-    this.instagram = navParams.get('instagram');
-    this.twitter = navParams.get('twitter');
+    this.marca = navParams.get('marca');
+    this.serie = navParams.get('serie');
+    this.precio = navParams.get('precio');
   }
 
   ionViewDidLoad() {

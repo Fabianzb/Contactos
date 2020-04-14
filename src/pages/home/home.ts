@@ -20,7 +20,7 @@ export class HomePage {
   }
 
   ionViewWillEnter(){
-    this.http.get('/Contactos/Contactos/')
+    this.http.get('/Store/Store/')
     .subscribe(data =>{
       this.contacts=data;
       console.log(JSON.stringify(data));
@@ -34,7 +34,7 @@ export class HomePage {
     this.navCtrl.push(this.contactosPage);
   }
 
-  clickContacto(avatar,nombre,correo,telefono,facebook,instagram,twitter){
-    this.navCtrl.push(this.contactsInfoPage,{avatar:avatar,nombre:nombre,correo:correo,telefono:telefono,facebook:facebook,instagram:instagram,twitter:twitter});
+  clickContacto(avatar,nombre,marca,serie,precio){
+    this.navCtrl.push(this.contactsInfoPage,{avatar:avatar,nombre:nombre,marca:marca,serie:serie,precio:precio});
   }
 }

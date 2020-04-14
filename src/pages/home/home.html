@@ -1,7 +1,7 @@
 <ion-header > 
   <ion-navbar>
     <ion-title >
-      Contactos
+      Store
     </ion-title>
     <ion-buttons end>
       <button style="font-size: 30px;" ion-button icon only (click)="clickAdd()">
@@ -19,8 +19,8 @@
           <ion-avatar item-start>
             <img src={{contacto.avatar}}>
           </ion-avatar>
-          <h2 (click)="clickContacto(contacto.avatar,contacto.nombre,contacto.correo,contacto.telefono,contacto.facebook,contacto.instagram,contacto.twitter)">{{contacto.nombre}}</h2>
-          <h3>{{contacto.telefono}}</h3>
+          <h2 (click)="clickContacto(contacto.avatar,contacto.nombre,contacto.marca,contacto.serie,contacto.precio)">{{contacto.nombre}}</h2>
+          <h3>{{contacto.serie}}</h3>
         </ion-item>
       </ion-list>
     </ion-item-group>
@@ -28,21 +28,9 @@
 
 <ion-footer>
   <ion-toolbar text-center="">
-    <ion-buttons >
-      <button ion-button style="font-size: 27px;">
-        <ion-icon name="ios-star-outline"></ion-icon>
-      </button>
-      <button ion-button style="font-size: 27px;">
-        <ion-icon name="ios-time-outline"></ion-icon>
-      </button>
-      <button ion-button style="font-size: 27px;">
-        <ion-icon name="ios-contact-outline"></ion-icon>
-      </button>
+    <ion-buttons > 
       <button  ion-button style="font-size: 27px;">
         <ion-icon  name="ios-keypad-outline"></ion-icon>
-      </button>
-      <button ion-button style="font-size: 27px;">
-        <ion-icon name="ios-recording-outline"></ion-icon>
       </button>
     </ion-buttons>
   </ion-toolbar>

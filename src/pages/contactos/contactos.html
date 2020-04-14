@@ -6,7 +6,7 @@
 -->
 <ion-header>
   <ion-navbar>
-    <ion-title>Agregar Contacto</ion-title>
+    <ion-title>Agregar Producto</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -17,24 +17,16 @@
       <ion-input type = "text" [(ngModel)]="nombre"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label floating>Correo</ion-label>
-      <ion-input type = "text" [(ngModel)]="correo"></ion-input>
+      <ion-label floating>Marca</ion-label>
+      <ion-input type = "text" [(ngModel)]="marca"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label floating>Telefono</ion-label>
-      <ion-input type = "text" [(ngModel)]="telefono"></ion-input>
+      <ion-label floating>Serie</ion-label>
+      <ion-input type = "text" [(ngModel)]="serie"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label floating>Facebook</ion-label>
-      <ion-input type = "text" [(ngModel)]="facebook"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label floating>Instagram</ion-label>
-      <ion-input type = "text" [(ngModel)]="instagram"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label floating>Twitter</ion-label>
-      <ion-input type = "text" [(ngModel)]="twitter"></ion-input>
+      <ion-label floating>Precio</ion-label>
+      <ion-input type = "text" [(ngModel)]="precio"></ion-input>
     </ion-item>
   
   <button ion-button block color="secondary" (click)="showAlert()">Guardar</button>

@@ -16,13 +16,11 @@ import { AlertController } from 'ionic-angular';
   templateUrl: 'contactos.html',
 })
 export class ContactosPage {
-  avatar = '../assets/imgs/Contacto.png';
+  avatar = '../assets/imgs/Food.png';
   nombre = '';
-  correo = '';
-  telefono = '';
-  facebook = '';
-  instagram = '';
-  twitter = '';
+  marca = '';
+  serie = '';
+  precio = '';
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public http: HttpClient, private alertCtrl: AlertController) {
   
@@ -34,17 +32,15 @@ export class ContactosPage {
 
   addContact(){
     console.log('addContact');
-    const contactos = {
+    const productos = {
       avatar: this.avatar,
       nombre: this.nombre,
-      correo: this.correo,
-      telefono: this.telefono,
-      facebook: this.facebook,
-      instagram: this.instagram,
-      twitter: this.twitter
+      marca: this.marca,
+      serie: this.serie,
+      precio: this.precio
     };
-    console.log(JSON.stringify(contactos));
-    this.http.post('/Contactos/Contactos/',contactos)
+    console.log(JSON.stringify(productos));
+    this.http.post('/Store/Store/',productos)
     .subscribe(data => {
       console.log(JSON.stringify(data));
       this.navCtrl.pop();
@@ -57,8 +53,8 @@ export class ContactosPage {
 
   showAlert() {
     let alert = this.alertCtrl.create({
-      title: 'Contacto',
-      subTitle: 'Contacto Agregado Correctamente!',
+      title: 'Productos',
+      subTitle: 'Producto Agregado Correctamente!',
       buttons: ['OK']
     });
     alert.present();

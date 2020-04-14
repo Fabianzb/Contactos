@@ -1,12 +1,12 @@
 {
-  "name": "Contactos",
+  "name": "Store",
   "integrations": {
     "cordova": {}
   },
   "type": "ionic-angular",
   "proxies": [
     {
-      "path": "/Contactos",
+      "path": "/Store",
       "proxyUrl": "http://127.0.0.1:5000"
     }
   ]
